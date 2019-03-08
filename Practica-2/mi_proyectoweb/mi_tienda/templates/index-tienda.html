@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mi tienda</title>
+  <link rel="stylesheet" href="{% static 'micss.css'%}">
+</head>
+
+<body>
+  <div class="principal">
+    <div class="encabezado1">
+
+    <h1><a href="http://localhost">Tienda Web</a></h1>
+    </div>
+
+    <div class="contenido">
+      <div class="menu">
+        <h2>Productos</h2>
+        <ul>       <li><a href="Televisores.html">Televisores</a></li>  </ul>
+        <ul>       <li><a href="Moviles.html">Moviles</a></li>  </ul>
+        <ul>       <li><a href="Ordenadores.html">Ordenadores</a></li>   </ul>
+      </div>
+      <div class="productos">
+        <img src="/static/portada.png" align="middle" >
+      </div>
+    </div>
+
+    <div class="piepagina">
+    <h1>Practica 1  LTAW</h1>
+    </div>
+  </div>
+</body>
+</html>

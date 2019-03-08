@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from mi_tienda.models import Product
 # Create your views here.
 def home_view (request):
-    return render(request, "index.html", {})
+    return render(request, "index-tienda.html", {})
 
 def list(request):
     objects = Product.objects.all()
