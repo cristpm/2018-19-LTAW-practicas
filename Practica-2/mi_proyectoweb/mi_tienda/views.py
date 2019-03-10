@@ -15,3 +15,12 @@ def list(request):
         print(elt.name)
         html += '<p>'+ elt.name + ' ' + str(elt.price) + '<p>'
     return HttpResponse(html)
+
+def televisores_view (request):
+    return render(request, "index-tienda.html", {})
+
+def moviles_view (request):
+    return render(request, "index-tienda.html", {})
+
+def ordenadores_view (request):
+    return render(request, "index-tienda.html", {})

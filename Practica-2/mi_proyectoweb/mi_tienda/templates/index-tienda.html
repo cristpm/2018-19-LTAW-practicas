@@ -5,30 +5,51 @@
 <head>
   <meta charset="utf-8">
   <title>Mi tienda</title>
-  <link rel="stylesheet" href="{% static 'micss.css'%}">
+  <link rel="stylesheet" href="{% static 'main-css.css'%}">
 </head>
 
 <body>
   <div class="principal">
     <div class="encabezado1">
-
-    <h1><a href="http://localhost">Tienda Web</a></h1>
+      <h1><a href="http://127.0.0.1:8000/">Mi Tienda Web</a></h1>
+      <form >
+          <input type="search" id="miBusqueda" name="q">
+          <button>Buscar</button>
+      </form>
     </div>
 
     <div class="contenido">
       <div class="menu">
         <h2>Productos</h2>
-        <ul>       <li><a href="Televisores.html">Televisores</a></li>  </ul>
-        <ul>       <li><a href="Moviles.html">Moviles</a></li>  </ul>
-        <ul>       <li><a href="Ordenadores.html">Ordenadores</a></li>   </ul>
+        <ul>       <li><a href="http://127.0.0.1:8000/televisores/">Televisores</a></li>  </ul>
+        <ul>       <li><a href="http://127.0.0.1:8000/moviles/">Moviles</a></li>  </ul>
+        <ul>       <li><a href="http://127.0.0.1:8000/ordenadores/">Ordenadores</a></li>   </ul>
       </div>
-      <div class="productos">
-        <img src="/static/portada.png" align="middle" >
-      </div>
-    </div>
 
+      <div class="productos">
+        <div class="producto">
+          <img  class="img-producto" src="/static/movil.png" height="175px" width="300px">
+          <p>SAMSUNG S9</p>
+          <p>699$</p>
+          <button class="button" ><span>Comprar</span></button>
+        </div>
+        <div class="producto">
+          <img  class="img-producto" src="/static/tele.png" height="175px" width="300px">
+          <p>SAMSUNG tv 32"</p>
+          <p>599$</p>
+          <button class="button" ><span>Comprar </span></button>
+        </div>
+        <div class="producto">
+          <img  class="img-producto" src="/static/msi-ps42.png" height="175px" width="300px">
+          <p>MSI PS42</p>
+          <p>1299$</p>
+          <button class="button" ><span>Comprar</span></button>
+        </div>
+      </div>
+
+    </div>
     <div class="piepagina">
-    <h1>Practica 1  LTAW</h1>
+    <h1>Practica 2 LTAW</h1>
     </div>
   </div>
 </body>

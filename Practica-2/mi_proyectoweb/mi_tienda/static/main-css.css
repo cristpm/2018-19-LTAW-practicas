@@ -1,0 +1,118 @@
+body{
+                padding:5px;
+                margin: 0 auto;
+                font-family:Arial;
+                font-size: 18px;
+                background-color:#7FDBFF;
+}
+
+.principal{
+                width: 95%;
+                height: 850px;
+                background-color: white;
+                margin: 20px 20px 20px 20px ;
+                border:1px inset;
+}
+
+.encabezado1{
+                width: 95%;
+                height: 120px;
+                background-color: #01FF70;
+                margin: 20px 20px 20px 20px ;
+                border:1px inset;
+                text-align:center;
+}
+
+
+.contenido{
+                width: 95%;
+                height: 600px;
+                background-color: white;
+                margin: 20px 20px 20px 20px ;
+}
+
+.menu{
+                width: 20%;
+                height: 550px;
+                background-color: #01FF70;
+                margin: 20px 20px 20px 20px ;
+                float: left;
+                border:1px inset ;
+                text-align:left;
+}
+
+.productos{
+                width: 70%;
+                height: 550px;
+                background-color: #01FF70;
+                margin: 20px 20px 20px 20px ;
+                float: right;
+                border:1px inset;
+                text-align:center;
+}
+
+.producto{
+                width: 98%;
+                height: 175px;
+                background-color: #01FF70;
+                margin: 4px 4px 4px 4px ;
+                text-align:center;
+                overflow: auto;
+}
+
+.img-producto{
+                float: left;
+                height:175px;
+                width:300px;
+}
+
+.piepagina{
+                width: 95%;
+                height: 50px;
+                background-color: #01FF70;
+                margin: 20px 20px 20px 20px ;
+                border-color: black;
+                border:1px inset;
+                font-family:Arial;
+                font-size: 10px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 26px;
+  padding: 18px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
