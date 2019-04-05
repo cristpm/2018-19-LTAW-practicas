@@ -22,7 +22,6 @@ http.createServer(function (req, res) {
   }
   console.log("Filename: " + filename)
   console.log("Tipo: " + tipo)
-  console.log("//////////////////////")
 
   fs.readFile(filename, function(err, data) {
     if (err) {
