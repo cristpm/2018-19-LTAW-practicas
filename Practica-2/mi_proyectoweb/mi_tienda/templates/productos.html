@@ -19,33 +19,32 @@
     </div>
 
       <div class="menu">
-        <h2>Productos</h2>
+        <h2>productoS</h2>
         <ul>       <li><a href="/televisores/">Televisores</a></li>  </ul>
         <ul>       <li><a href="/moviles/">Moviles</a></li>  </ul>
         <ul>       <li><a href="/ordenadores/">Ordenadores</a></li>   </ul>
       </div>
 
       <div class="productos">
-
         <div class="producto">
-          <a href="/moviles/">
-          <img  class="img-producto" src="/static/movil.png" >
-          <h2>Moviles</h2>
-          </a>
+          <img  class="img-producto" src="{% static image1 %}" >
+          <p>{{p1name}}</p>
+          <p>{{p1price}}</p>
+          <button class="button" ><span>Comprar </span></button>
         </div>
 
         <div class="producto">
-          <a href="/televisores/">
-          <img  class="img-producto" src="/static/tele.png" >
-          <h2>Televisores</h2>
-          </a>
+          <img  class="img-producto" src="{% static image2 %}" >
+          <p>{{p2name}}</p>
+          <p>{{p2price}}</p>
+          <button class="button" ><span>Comprar </span></button>
         </div>
 
         <div class="producto">
-          <a href="/ordenadores/">
-          <img  class="img-producto" src="/static/msi-ps42.png" >
-          <h2>Ordenadores</h2>
-          </a>
+          <img  class="img-producto" src="{% static image3 %}" >
+          <p>{{p3name}}</p>
+          <p>{{p3price}}</p>
+          <button class="button" ><span>Comprar </span></button>
         </div>
 
       </div>
