@@ -1,0 +1,45 @@
+body{
+                padding:5px;
+                margin: 0 auto;
+                font-family:Arial;
+                font-size: 18px;
+                background-color:#7FDBFF;
+}
+
+.principal{
+                width: 98%;
+                height: 750px;
+                background-color: white;
+                margin: 20px 20px 20px 20px ;
+                border: 1px solid black;
+}
+
+.encabezado{
+                height: 120px;
+                background-color: #01FF70;
+                margin: 20px 20px 20px 20px ;
+                border: 1px solid black;
+                text-align:center;
+}
+
+
+
+.mensajes{
+                width: 15%;
+                height: 550px;
+                background-color: #01FF70;
+                margin: 0px 0px 20px 20px ;
+                float: left;
+                border: 1px solid black;
+                text-align:left;
+}
+
+.usuario{
+                width: 80%;
+                height: 550px;
+                background-color: #01FF70;
+                margin: 0px 20px 20px 20px ;
+                float: right;
+                border: 1px solid black;
+                text-align:center;
+}
