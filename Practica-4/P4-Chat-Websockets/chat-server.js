@@ -1,6 +1,7 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var num_usuarios = 0;
 
 //--Servir la pagina principal
 app.get('/', function(req, res){
@@ -31,6 +32,7 @@ io.on('connection', function(socket){
   console.log('--> Usuario conectado!');
   socket.emit("new_message", 'Bienvenido al chat');
   socket.broadcast.emit('new_message', 'Un nuevo usuario se ha conectado');
+  num_usuarios += 1;
 
   //-- Detectar si el usuario se ha desconectado
   socket.on('disconnect', function(){
@@ -45,13 +47,15 @@ io.on('connection', function(socket){
     if ( res[res.length-1] == 'help') {
       socket.emit("new_message",
       " COMANDOS:<br>/help:Mostrará una lista con todos los comandos soportados <br>" +
-      "/list: <br>/hello: <br>/data:")
+      "/list: Devolverá el número de usuarios conectados <br>" +
+      "/hello: El servidor nos devolverá el saludo <br>" +
+      "/data: Nos devolverá la fecha");
     } else if ( res[res.length-1] == 'list') {
-      socket.emit("new_message", "numero de usuarios")
+      socket.emit("new_message", "numero de usuarios: " + num_usuarios);
     } else if ( res[res.length-1] == 'hello') {
-      socket.emit("new_message", "hello")
+      socket.emit("new_message", "hello usuario");
     } else if ( res[res.length-1] == 'date') {
-      socket.emit("new_message", "" + new Date())
+      socket.emit("new_message", "" + new Date());
     } else {
       //-- Emitir un mensaje a todos los clientes conectados
       io.emit('new_message', msg);

@@ -32,6 +32,7 @@ body{
                 float: left;
                 border: 1px solid black;
                 text-align:center;
+                overflow: auto;
 }
 
 .mensajes{
@@ -42,4 +43,5 @@ body{
                 float: right;
                 border: 1px solid black;
                 text-align:leftr;
+                overflow: auto;
 }
