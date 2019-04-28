@@ -15,6 +15,7 @@ app.get('/chat-client.js', function(req, res){
   console.log("Fichero js solicitado")
 });
 
+//-- Servir el cliente css
 app.get('/styles.css', function(req, res){
   res.sendFile(__dirname + '/styles.css');
   console.log('Fichero css solicitado');
@@ -43,7 +44,6 @@ io.on('connection', function(socket){
   socket.on('new_message', msg => {
     var res = msg.split("/");
     //-- Notificarlo en la consola del servidor
-    console.log(res[res.length-1])
     if ( res[res.length-1] == 'help') {
       socket.emit("new_message",
       " COMANDOS:<br>/help:Mostrará una lista con todos los comandos soportados <br>" +
