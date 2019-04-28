@@ -1,12 +1,47 @@
-h3 {
-  margin: auto;
-  width: 93%;
-  padding: 20px;
-  background-color: lightgreen;
-  border-radius: 10px;
+body{
+                padding:5px;
+                margin: 0 auto;
+                font-family:Arial;
+                font-size: 18px;
+                background-color:#7FDBFF;
 }
 
-#display {
-    border: 2px solid lightblue;
-    padding: 10px;
+.principal{
+                width: 98%;
+                height: 700px;
+                background-color: white;
+                margin: 20px 20px 20px 20px ;
+                border: 1px solid black;
+}
+
+.encabezado{
+                height: 100px;
+                background-color: #01FF70;
+                margin: 20px 20px 20px 20px ;
+                border: 1px solid black;
+                text-align:center;
+}
+
+
+
+.usuario{
+                width: 30%;
+                height: 550px;
+                background-color: white;
+                margin: 0px 0px 20px 150px ;
+                float: left;
+                border: 1px solid black;
+                text-align:center;
+                overflow: auto;
+}
+
+.mensajes{
+                width: 30%;
+                height: 550px;
+                background-color: white;
+                margin: 0px 150px 20px 20px ;
+                float: right;
+                border: 1px solid black;
+                text-align:leftr;
+                overflow: auto;
 }
