@@ -26,28 +26,25 @@
       </div>
 
       <div class="productos">
-
-        <div class="producto">
-          <a href="/moviles/">
-          <img  class="img-producto" src="/static/samsung-s10.png" >
-          <h2>Moviles</h2>
-          </a>
-        </div>
-
-        <div class="producto">
-          <a href="/televisores/">
-          <img  class="img-producto" src="/static/samsung-65.png" >
-          <h2>Televisores</h2>
-          </a>
-        </div>
-
-        <div class="producto">
-          <a href="/ordenadores/">
-          <img  class="img-producto" src="/static/msi-1.png" >
-          <h2>Ordenadores</h2>
-          </a>
-        </div>
-
+        <form action="/your-order.html">
+          <fieldset>
+            <legend>Order information:</legend>
+            Product name:<br>
+            <input type="text" name="productname" value="">
+            <br>
+            Quantity:<br>
+            <input type="text" name="quantity" value="">
+            <br>
+            Yuor Name:<br>
+            <input type="text" name="yourname" value="">
+            <br>
+            Your Address:<br>
+            <input type="text" name="youraddress" value="">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+          </fieldset>
+        </form>
       </div>
 
   </div>

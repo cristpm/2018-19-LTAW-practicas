@@ -3,55 +3,54 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.http import HttpResponse
-from mi_tienda.models import Product
+from mi_tienda.models import Producto
+
 
 # Create your views here.
 def home_view (request):
     return render(request, "index-tienda.html", {})
 
-def televisores_view (request):
-    return render(request, "productos.html", {
-    'image1': 'tele.png',
-    'p1name' : 'SAMSUNG tv 42"',
-    'p1price': '599$',
-    'image2': 'tele.png',
-    'p2name' : 'SAMSUNG tv 32"',
-    'p2price': '499$',
-    'image3': 'tele.png',
-    'p3name' : 'SAMSUNG tv 28"',
-    'p3price': '399$',
-    })
 
-def moviles_view (request):
-    return render(request, "productos.html", {
-    'image1': 'movil.png',
-    'p1name' : 'SAMSUNG S10',
-    'p1price': '799$',
-    'image2': 'movil.png',
-    'p2name' : 'SAMSUNG S9',
-    'p2price': '599$',
-    'image3': 'movil.png',
-    'p3name' : 'SAMSUNG S8',
-    'p3price': '499$',
-    })
+def search_product (request):
+        query = request.GET.get('search_input', None)
+        objects = Producto.objects.filter(name__icontains=query)
+        html = "<p>Listado de articulos encontrados</p>"
+        for elt in objects:
+            print(elt.name)
+            html += '<p>'+ ' ' + elt.name  + '<p>'
+        return HttpResponse(html)
 
-def ordenadores_view (request):
+
+def formulario_view(request):
+    return render(request, "formulario.html", {})
+
+
+def your_order_view(request):
+    html = "<p>Su compra se ha procesado con exito</p>"
+    return HttpResponse(html)
+
+
+def product_view(request, product_type):
+    objects = Producto.objects.filter(tipo = product_type)
     return render(request, "productos.html", {
-    'image1': 'msi-ps42.png',
-    'p1name' : 'msi-ps42',
-    'p1price': '999$',
-    'image2': 'msi-ps42.png',
-    'p2name' : 'msi-ps42',
-    'p2price': '999$',
-    'image3': 'msi-ps42.png',
-    'p3name' : 'msi-ps42',
-    'p3price': '999$',
+    'image1': objects[0].name + ".png",
+    'p1name' : objects[0].name,
+    'p1price': str(objects[0].price) + " $",
+    'p1stock': objects[0].stock,
+    'image2': objects[1].name + ".png",
+    'p2name' : objects[1].name,
+    'p2price': str(objects[1].price) + " $",
+    'p2stock': objects[0].stock,
+    'image3': objects[2].name + ".png",
+    'p3name' : objects[2].name,
+    'p3price': str(objects[2].price) + "$",
+    'p3stock': objects[0].stock,
     })
 
 def list(request):
-    objects = Product.objects.all()
+    objects = Producto.objects.all()
     html = "<p>Listado de articulos</p>"
     for elt in objects:
         print(elt.name)
-        html += '<p>'+ elt.name + ' ' + str(elt.price) + '<p>'
+        html += '<p>'+ elt.tipo + ' ' + elt.name + ' ' + str(elt.price) + '<p>'
     return HttpResponse(html)
