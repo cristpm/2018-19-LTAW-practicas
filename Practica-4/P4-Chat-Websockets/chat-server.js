@@ -34,7 +34,7 @@ io.on('connection', function(socket){
   socket.emit("new_message", 'Bienvenido al chat');
   /*
   Otra comunicacion full duplex(bidirecccional) que se puede abrir entre
-  cliente y servidor
+  cliente y servidor "nuevo evento websocket"
   socket.emit('mensajes_internos', 'Mensajes internos abiertos');
   */
   socket.broadcast.emit('new_message', 'Un nuevo usuario se ha conectado');
