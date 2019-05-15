@@ -6,14 +6,17 @@ function main() {
 
   //-- Crear el websocket
   var socket = io();
+  /*
+  Otra comunicacion full duplex(bidirecccional) que se puede abrir entre
+  cliente y servidor
+  socket.emit('mensajes_internos', 'Mensajes internos abiertos');
+  */
 
   //-- Obtener los elementos de interfaz:
-  //-- Boton de envio de mensaje
-  var send = document.getElementById('send')
-  //-- cuadro para mostrar mensajes recibidos
-  var mensajes = document.getElementById('mensajes')
-  //-- Caja con el mensaje a enviar
-  var msg = document.getElementById("msg")
+  var send = document.getElementById('send')//-- Boton de envio de mensaje
+  var mensajes = document.getElementById('mensajes')  //-- cuadro para mostrar mensajes recibidos
+  var msg = document.getElementById("msg")  //-- Caja con el mensaje a enviar
+
 
   //-- Cuando se aprieta el botón de enviar...
   send.onclick = () => {
@@ -33,4 +36,10 @@ function main() {
     mensajes.appendChild(mensaje);
   });
 
+/*Otra comunicacion full duplex(bidirecccional) que se puede abrir entre
+  cliente y servidor
+  socket.on('mensajes_internos',msg =>{
+    console.log("mensaje interno = " + msg);
+  })
+*/
 }

@@ -32,12 +32,18 @@ http.listen(3000, function(){
 io.on('connection', function(socket){
   console.log('--> Usuario conectado!');
   socket.emit("new_message", 'Bienvenido al chat');
+  /*
+  Otra comunicacion full duplex(bidirecccional) que se puede abrir entre
+  cliente y servidor
+  socket.emit('mensajes_internos', 'Mensajes internos abiertos');
+  */
   socket.broadcast.emit('new_message', 'Un nuevo usuario se ha conectado');
   num_usuarios += 1;
 
   //-- Detectar si el usuario se ha desconectado
   socket.on('disconnect', function(){
     console.log('--> Usuario Desconectado');
+    num_usuarios -= 1;
   });
 
   //-- Detectar si se ha recibido un mensaje del cliente
@@ -63,4 +69,10 @@ io.on('connection', function(socket){
     }
   })
 
+  /*Otra comunicacion full duplex(bidirecccional) que se puede abrir entre
+    cliente y servidor
+    socket.on('mensajes_internos',msg =>{
+      console.log("mensaje interno = " + msg);
+    })
+  */
 });

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mi tienda</title>
+  <link type="text/css" rel="stylesheet" href="estilos.css" />
+  <script src="compra.js"></script>
+</head>
+
+<body  onload="main();">
+
+  <div class="encabezado">
+    <h1><a href="index.html">Tienda Web</a></h1>
+    <ul class="navegacion">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="login.html">Ingresar</a></li>
+      <li><a href="compra.html">Comprar <img alt="icono" src="carrocompra.png" width="20" height="20"></a></li>
+    </ul>
+  </div>
+
+    <div class="menu">
+        <h2>Productos</h2>
+        <ul>       <li><a href="Televisores.html">Televisores</a></li>  </ul>
+        <ul>       <li><a href="Moviles.html">Moviles</a></li>  </ul>
+        <ul>       <li><a href="Ordenadores.html">Ordenadores</a></li>   </ul>
+    </div>
+
+    <div class="productos">
+
+      <div id="lista" class="producto">
+        <h4>Información del carrito:</h4>
+      </div>
+      <div class="infoproducto">
+        <h4>Formulario de compra:</h4>
+        <form action="/form-compra" method="post">
+            Nombre:<br>
+            <input type="text" name="nombre">
+            <br><br>
+
+            Apellidos:<br>
+            <input type="text" name="apellidos">
+            <br><br>
+
+            E-mail:<br>
+            <input type="text" name="correo">
+            <br><br>
+
+            Telefono:<br>
+            <input type="text" name="telefono">
+            <br><br>
+
+            Metodo de pago:<br>
+            <input type="radio" name="pago" value="paypal"> Paypal<br>
+            <input type="radio" name="pago" value="tarjeta"> Tarjeta de credito<br>
+            <input type="radio" name="pago" value="transferencia"> Transferencia bancaria
+            <br><br>
+
+            <input type="submit" value="Realizar el pedido">
+        </form>
+      </div>
+    </div>

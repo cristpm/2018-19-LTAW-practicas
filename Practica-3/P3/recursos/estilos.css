@@ -1,0 +1,129 @@
+body{
+                padding:5px;
+                margin: 0 auto;
+                font-family:Arial;
+                font-size: 18px;
+                background-color:#7FDBFF;
+}
+
+
+.encabezado{
+                height: 120px;
+                background-color: #01FF70;
+                margin: 20px 20px 20px 20px ;
+                border: 1px solid black;
+                text-align:center;
+                padding: 5px;
+}
+
+.navegacion {
+    list-style-type: none;
+    padding: 5px;
+    overflow: hidden;
+    margin-bottom: :5px;
+    text-align:left;
+}
+
+.navegacion li {
+    display: inline-block;
+    border-bottom: none;
+}
+
+.navegacion li a {
+    padding: 0px 10px;
+}
+
+.menu{
+                width: 15%;
+                height: 550px;
+                background-color: #01FF70;
+                margin: 0px 0px 20px 20px ;
+                float: left;
+                border: 1px solid black;
+                text-align:left;
+}
+
+.menu form{
+    padding: 0px 5px;
+}
+
+.productos{
+                width: 80%;
+                height: 550px;
+                background-color: #01FF70;
+                margin: 0px 20px 20px 20px ;
+                float: right;
+                border: 1px solid black;
+                text-align:center;
+}
+
+.producto{
+                width: 32%;
+                height: 95%;
+                background-color: #01FF70;
+                margin: 5px 5px 5px 5px ;
+                text-align:center;
+                border: 1px solid black;
+                float: left;
+                overflow: auto;
+}
+
+.infoproducto{
+                width: 65%;
+                height: 95%;
+                background-color: #01FF70;
+                margin: 5px 5px 5px 5px ;
+                text-align:center;
+                border: 1px solid black;
+                float: left;
+                overflow: auto;
+}
+
+.img-producto{
+                float: center;
+                margin: 50px 0px 0px 0px ;
+                height:175px;
+                width:300px;
+}
+
+
+
+.button {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 18px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mi tienda</title>
+  <link type="text/css" rel="stylesheet" href="estilos.css" />
+  <script src="web-client.js"></script>
+
+</head>
+
+<body>
+
+  <div class="encabezado">
+    <h1><a href="index.html">Tienda Web</a></h1>
+    <ul class="navegacion">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="login.html">Ingresar</a></li>
+      <li><a href="compra.html">Comprar <img alt="icono" src="carrocompra.png" width="20" height="20"></a></li>
+    </ul>
+  </div>
+
+    <div class="menu">
+        <h2>Productos</h2>
+        <form action="/search-on" method="post" autocomplete= "off">
+          <input type="text"  list= "resultado" name="search" oninput ="main()" id="search">
+          <datalist id="resultado"></datalist>
+          <input type="submit" value="Buscar">
+        </form>
+        <ul>       <li><a href="Televisores.html">Televisores</a></li>  </ul>
+        <ul>       <li><a href="Moviles.html">Moviles</a></li>  </ul>
+        <ul>       <li><a href="Ordenadores.html">Ordenadores</a></li>   </ul>
+    </div>
+
+    <div class="productos">
+      <h3>Te has registrado con exito</h3>
+    </div>
+
+</body>
+</html>
