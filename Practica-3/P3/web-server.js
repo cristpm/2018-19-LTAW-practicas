@@ -1,4 +1,4 @@
-var http = require('http');
+ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 
@@ -98,12 +98,33 @@ http.createServer(function (req, res) {
         var body = [];
         req.on('data', function(chunk) {
           body.push(chunk);
+          console.log(body);
         });
         req.on('end', function() {
           body = Buffer.concat(body).toString();
           console.log(body)
           fs.readFile("./recursos/productos-list.json",function(error,data){
             data = JSON.parse(data)//de texto a objeto
+            data = JSON.stringify(data);
+            console.log(data)
+            res.setHeader('Content-Type','application/json');
+            res.write(data);
+            res.end();
+          });
+        });
+        return
+      }else if(filename == "/descuento"){//se envia un descuento
+        console.log("me envian un codigo de desxuento:");
+        var codigo ="";
+        req.on('data', function(chunk) {
+          codigo =  chunk.toString();
+          console.log(codigo);
+        });
+
+        req.on('end', function() {
+          fs.readFile("./recursos/descuentos-list.json",function(error,data){
+            data = JSON.parse(data)//de texto a objeto
+            console.log(data.descuentos[0])
             data = JSON.stringify(data);
             console.log(data)
             res.setHeader('Content-Type','application/json');
